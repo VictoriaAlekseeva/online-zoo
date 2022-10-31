@@ -1,0 +1,258 @@
+.donation {
+    background: $color-orange-gradient;
+}
+.donation__wrapper {
+    padding: 40px 0 180px;
+    color: $color-text-light;
+
+}
+
+.h3_donation {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    &_color {
+        text-transform: none;
+        margin-top: 48px;
+        color: $color-text-colored;
+        margin-bottom: 60px;
+    }
+}
+
+.p_donation {
+    &_bold {
+    @include font($size:1.6rem, $height: 2.2rem, $weight: 500, $style: normal);
+    }
+}
+
+.h2_donation {
+    padding-bottom: 10px;
+    margin-left: -8px;
+}
+
+.pick-and-feed__wrapper_donation {
+    color: $color-text-dark;
+    padding: 40px 92px 62px;
+
+}
+
+
+.payment-options {
+    width: 25%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.donation__amount__scale__list {
+    position: relative;
+    z-index: 10;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+
+    &_dots {
+        background-color: #404950;
+        width: 100%;
+        height: 27px;
+        border-radius: 2px;
+        padding: 8px 30px 8px 26px;
+    }
+
+    &_amount {
+        padding-right: 10px;
+        cursor: pointer;
+    }
+}
+.dots__line {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    top: 40%;
+    background-color: #72828E;
+    height: 2px;
+    width: calc(100% - 62px);
+}
+
+
+.scale__dots {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: $color-dots;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        bottom: -16px;
+        top: -16px;
+        left: -15px;
+        right: -16px;
+    }
+
+    &.active::after {
+        content: '';
+        border: 1px solid $color-text-colored;
+    }
+
+    &.active::before {
+        content: '';
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        border: 1px solid $color-text-colored;
+        bottom: -8px;
+        top: -8px;
+        right: -9px;
+        left: -7px;
+
+    }
+}
+
+.scale__amount {
+    position: relative;
+    @include font($size:2.6rem, $height: 3.6rem, $weight: 500, $style: normal);
+    color: #333B41;
+    width: 58px;
+    padding-top: 3px;
+
+
+}
+
+.donation__amount_text {
+    padding-left: 4px;
+    margin-bottom: 17px;
+}
+
+.payment-amount {
+    height: 54px;
+    width: 268px;
+    margin-left: -12px;
+
+    padding: 16px 9px;
+    border: 1px solid #929699;
+    border-radius: 2px;
+    background: url('../img/backgrounds/Vector (2).svg');
+    background-position: 95%;
+    background-repeat: no-repeat;
+
+    &::placeholder {
+        color: #929699;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+    line-height: 140%;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    &,
+    &:hover,
+    &:focus {
+        appearance: none;
+        -moz-appearance: textfield;
+    }
+}
+
+.payment-type {
+    margin: 25px 5px 0px;
+
+    //radiobutton style
+    position: relative;
+    height: 15px;
+    width: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: 2px solid $color-input-range;
+      }
+
+    &:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $color-input-range;
+        transform: translate(-50%, -50%);
+        visibility: visible;
+      }
+
+
+}
+
+
+
+.animal-and-food {
+    width: 60%;
+    margin: auto;
+    margin-left: 215px;
+    margin-top: 25px;
+    margin-bottom: 47px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.animal-to-feed_picture {
+    display: block;
+}
+
+.diet__counter {
+    @include font($size:7.2rem, $height: 5.8rem, $weight: 500, $style: normal);
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.animal-to-feed_description {
+    text-align: left;
+    color: #333B41;
+    margin-bottom: 10px;
+}
+
+.animal-and-food__times {
+    @include font($size:3.6rem, $height: 3rem, $weight: 300, $style: normal);
+    color: #333B41;
+    margin-top: 15px;
+
+    margin-right: 55px;
+    text-align: left;
+}
+
+
+.payment-frequency {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    margin-left: -12px;
+}
+
+.donation__share_text {
+    text-align: center;
+}

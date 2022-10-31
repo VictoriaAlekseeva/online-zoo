@@ -1,0 +1,132 @@
+.footer {
+    background-color: $color-background-dark;
+    color: $color-text-light;
+
+
+    &__wrapper {
+        padding: 41px 0px 40px;
+        display: flex;
+        gap: 30px;
+
+    }
+}
+
+.footer__column {
+    width: calc(33% - 10px);
+
+    .logo {
+        margin-bottom: 48px;
+    }
+
+    &_links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_nav {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &_subscribe {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+}
+
+.social-links__list {
+    list-style: none;
+    margin-top: 15px;
+
+}
+
+.social-links__link {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+
+    &:hover {
+        .social-links__link_logo {
+            background-color: rgba(196, 196, 196, 0.8);
+        }
+    }
+
+    &:active {
+        color: $color-footer-link-activ;
+        .social-links__link_logo {
+            background-color: $color-footer-link-activ;
+        }
+    }
+}
+
+.social-links__link_logo {
+    height: 26px;
+    width: 26px;
+    margin-right: 10px;
+    border-radius: 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(196, 196, 196, 0.5);
+
+    &.facebook {
+        background-image: url("../img/svg/Fill 211.svg");
+    }
+
+    &.twitter {
+        background-image: url("../img/svg/Fill 172.svg");
+    }
+
+    &.instagram {
+        background-image: url("../img/svg/Fill 166.svg");
+    }
+
+    &.youtube {
+        background-image: url("../img/svg/Fill 213.svg");
+    }
+
+}
+
+.footer__navigation {
+    width: 100%;
+}
+
+.footer__navigation__list {
+    list-style: none;
+    width: 100%;
+
+    display: flex;
+    gap: 58px;
+
+    margin-bottom: 10px;
+}
+
+.subscribe_subtitle {
+    padding-bottom: 50px;
+    font-weight: 300;
+
+}
+
+.subscribe__input {
+    width: 228px;
+    height: 42px;
+    background-color: transparent;
+    border: 1px solid $color-input-email-border;
+    border-radius: 3px;
+    padding-left: 10px;
+    margin-top: 12px;
+    margin-right: 5px;
+}
+
+.creator_info {
+    margin-top: 205px;
+    text-align: right;
+    @include font($size: 1.6rem, $weight: 100);
+
+    p {
+        margin-bottom: 3px;
+        margin-top: 15px;
+    }
+}

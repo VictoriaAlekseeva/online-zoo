@@ -1,0 +1,46 @@
+.main {
+    background: url('../img/backgrounds/Giant_Panda.jpg');
+    background-repeat: no-repeat;
+    background-position: center -80px;
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        padding-top: 86px;
+        padding-bottom: 70px;
+        margin-left: auto;
+        max-width: 43%;
+    }
+
+    &__text {
+        @include font($size: 10.7rem, $height: 8rem, $weight: 700);
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-text-light;
+        padding-bottom: 30px;
+    }
+
+    &_donation {
+        height: 385px;
+        background-position: center -200px;
+    }
+}
+
+.main__circle {
+    position: absolute;
+    top: 2%;
+    right: 21%;
+    z-index: -1;
+    display: block;
+    width: 465px;
+    height: 465px;
+    border-radius: 465px;
+    background-color: $color-button;
+}
+
+
+.text_highlight {
+    color: $color-text-highlight;
+}
+
+

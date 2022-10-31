@@ -1,0 +1,16 @@
+.not_interactive {
+   
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+.active {
+
+    color: $color-text-colored;
+
+    &:hover {
+        color: $color-text-colored;
+    }
+}

@@ -1,0 +1,91 @@
+.pets {
+
+    padding: 34px 0px 70px;
+    background: url('../img/backgrounds/palm_foto.jpg') no-repeat bottom left ,
+                url('../img/backgrounds/strelitzia 1.jpg') no-repeat bottom right;
+}
+.pets__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.pets__card {
+    border: 1px solid $color-ico-border;
+    border-radius: 5px;
+}
+
+.pets__description {
+    margin: 2px 13px 11px 16px;
+
+    &_carnivorous {
+        background-image: url('../img/svg/meet-fish_icon.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    &_herbivores {
+        background-image: url('../img/svg/banana-bamboo_icon.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+.pets__name {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.pets__location {
+    @include font($size:1.5rem, $height: 1.7rem, $weight: 300)
+}
+
+.arrow {
+    display: block;
+    position: absolute;
+    top: 44%;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-image: $color-arrow;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:active{
+        background: $color-arrow-active;
+    }
+
+    &_left {
+        left: -7%;
+
+    }
+
+    &_right {
+        right: -7%;
+    }
+
+}
+
+.right-arrow {
+    display: block;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: url('../img/svg/arrow-right.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.left-arrow {
+    display: block;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: url('../img/svg/arrow-left.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
