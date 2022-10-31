@@ -1,0 +1,24 @@
+.logo {
+    display: block;
+    cursor: pointer;
+    width: 82px;
+    height: 52px;
+    border-radius: 2px;
+    border: 1px solid $color-text-light;
+    text-align: center;
+    padding: 3px 3px;
+    @include font($size: 1.9rem, $height: 2.3rem, $weight: 300);
+    text-align: center;
+    background-image: url('../img/svg/bamboo.svg');
+    background-repeat: no-repeat;
+    background-position: 15% 80%;
+
+    &:hover {
+        border: 1px solid #ABABAB;
+    }
+
+
+    &:active {
+        border: 1px solid $color-link-active;
+    }
+}

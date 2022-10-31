@@ -1,0 +1,54 @@
+.button {
+    display: block;
+    width: 298px;
+    height: 54px;
+    color: $color-text-light;
+    background-color: $color-button;
+    border: 1px solid $color-button;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        background-color: $color-button-hover;
+        border: 1px solid $color-button-hover;
+    }
+
+    &:active {
+        background-color: $color-button-active;
+        border: 1px solid $color-button-active;
+    }
+
+
+    @include font($size: 1.6rem, $height: 2.2rem, $weight: 300);
+
+    &_rounded {
+        border-radius: 25px;
+        margin: 30px auto;
+    }
+
+    &_square {
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-right: auto;
+    }
+
+}
+
+.button_submit {
+    width: 129px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: $color-submit-button-background;
+    border: 1px solid $color-submit-button-default;
+    color: $color-submit-button-default;
+    transition: 0.3s;
+
+    &:active {
+        border: 1px solid $color-submit-button-active;
+        color: $color-submit-button-active;
+
+    }
+
+}

@@ -1,0 +1,92 @@
+.pick-and-feed {
+    padding: 69px 0px 100px;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);;
+}
+
+
+.pick-and-feed__wrapper {
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 41px 100px 29px 100px;
+
+    h2 {
+        color: $color-text-colored;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+        padding-top: 55px;
+    }
+
+    .subtitle {
+        padding: 10px 0px 35px;
+    }
+
+}
+
+.pick__description {
+    padding: 5px 0 5px;
+
+    &_bold {
+        width: 110%;
+        font-weight: 500;
+
+    }
+}
+
+.text_underline {
+    text-decoration: underline;
+    text-decoration-color: $color-text-colored;
+}
+
+.pick-and-feed__scheme {
+    width: 79.5%;
+    margin: auto;
+    padding: 37px 0px 30px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.pick-and-feed__picture {
+    width: 168px;
+    height: 168px;
+    background-color: $color-background-light;
+    border-radius: 5px;
+    border: 1px solid $color-button;
+
+    &.card {
+        background-image: url('../img/svg/pay.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &.plant {
+        background-image: url('../img/svg/zoo.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &.animal {
+        background-image: url('../img/svg/monkey.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.pick-and-feed__text {
+    width: 168px;
+    text-align: left;
+    padding-top: 30px;
+}
+
+.pick-and-feed__arrow {
+    width: 69px;
+    height: 160px;
+
+    background-image: url('../img/svg/Vector.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
