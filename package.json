@@ -7,9 +7,14 @@
     "style": "sass --watch sass/style.scss sass/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictoriaAlekseeva/online-zoo.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "normalize-scss": "^7.0.1"
-  }
+  "bugs": {
+    "url": "https://github.com/VictoriaAlekseeva/online-zoo/issues"
+  },
+  "homepage": "https://github.com/VictoriaAlekseeva/online-zoo#readme"
 }

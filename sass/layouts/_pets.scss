@@ -1,5 +1,4 @@
 .pets {
-
     padding: 34px 0px 70px;
     background: url('../img/backgrounds/palm_foto.jpg') no-repeat bottom left ,
                 url('../img/backgrounds/strelitzia 1.jpg') no-repeat bottom right;
@@ -16,6 +15,10 @@
 .pets__card {
     border: 1px solid $color-ico-border;
     border-radius: 5px;
+}
+
+.pets__img:hover {
+    transform: scale(1.1);
 }
 
 .pets__description {
