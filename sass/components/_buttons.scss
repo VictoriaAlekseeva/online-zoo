@@ -44,6 +44,11 @@
     border: 1px solid $color-submit-button-default;
     color: $color-submit-button-default;
     transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-text-medium;
+    }
 
     &:active {
         border: 1px solid $color-submit-button-active;

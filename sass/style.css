@@ -513,6 +513,10 @@ h3 {
   border-radius: 5px;
 }
 
+.pets__img:hover {
+  transform: scale(1.1);
+}
+
 .pets__description {
   margin: 2px 13px 11px 16px;
 }
@@ -1224,6 +1228,10 @@ h3 {
   border: 1px solid #333B41;
   color: #333B41;
   transition: 0.3s;
+  cursor: pointer;
+}
+.button_submit:hover {
+  color: #BDBDBD;
 }
 .button_submit:active {
   border: 1px solid #4B9200;
