@@ -9,6 +9,9 @@
 
 .backstage__content {
     padding: 140px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 85px;
 }
 
 .backstage__subtitle {

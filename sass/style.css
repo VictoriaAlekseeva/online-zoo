@@ -466,7 +466,7 @@ h3 {
   background-color: #F9804B;
 }
 
-.text_highlight {
+.main__text_highlight {
   color: #FFEE2E;
 }
 
@@ -488,6 +488,9 @@ h3 {
 
 .backstage__content {
   padding: 140px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 85px;
 }
 
 .backstage__subtitle {
