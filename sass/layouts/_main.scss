@@ -2,6 +2,7 @@
     background: url('../img/backgrounds/Giant_Panda.jpg');
     background-repeat: no-repeat;
     background-position: center -80px;
+    background-size: 100%;
 
     &__content {
         position: relative;
@@ -39,7 +40,7 @@
 }
 
 
-.text_highlight {
+.main__text_highlight {
     color: $color-text-highlight;
 }
 
