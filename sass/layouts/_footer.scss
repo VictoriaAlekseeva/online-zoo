@@ -113,12 +113,38 @@
     width: 228px;
     height: 42px;
     background-color: transparent;
-    border: 1px solid $color-input-email-border;
     border-radius: 3px;
     padding-left: 10px;
     margin-top: 12px;
     margin-right: 5px;
     color: $color-text-light;
+    outline: none;
+}
+
+.subscribe__input:placeholder-shown {
+    border: 1px solid $color-input-email-border;
+}
+
+
+
+.subscribe__input:not(:placeholder-shown):valid {
+    border: 1px solid $color-input-valid;
+
+    +.button_submit {
+        color: $color-input-valid;
+        border: 1px solid $color-input-valid;
+    }
+}
+
+.subscribe__input:not(:placeholder-shown):invalid {
+    border: 1px solid $color-input-invalid;
+    color: $color-input-invalid;
+
+    +.button_submit {
+        color: $color-input-invalid;
+        border: 1px solid$color-input-invalid;
+    }
+
 }
 
 .creator_info {
