@@ -145,6 +145,7 @@
     background: url('../img/backgrounds/Vector (2).svg');
     background-position: 95%;
     background-repeat: no-repeat;
+    outline: none;
 
     &::placeholder {
         color: #929699;
@@ -152,7 +153,12 @@
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
-    line-height: 140%;
+        line-height: 140%;
+
+    }
+
+    &::placeholder:focus {
+        color: $color-input-valid;
     }
 
     &::-webkit-outer-spin-button,
@@ -166,7 +172,25 @@
         appearance: none;
         -moz-appearance: textfield;
     }
+
+    &:focus {
+        border: 1px solid $color-input-valid;
+        color: $color-input-valid;
+    }
 }
+
+.payment-amount:not(:placeholder-shown):valid {
+    border: 1px solid $color-input-valid;
+    color: $color-input-valid;
+}
+
+.payment-amount:not(:placeholder-shown):invalid {
+    border: 1px solid $color-input-invalid;
+    color: $color-input-invalid;
+}
+
+
+
 
 .payment-type {
     margin: 25px 5px 0px;
