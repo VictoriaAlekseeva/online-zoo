@@ -945,6 +945,10 @@ h3 {
   border: 1px solid #F9804B;
 }
 
+.subscribe__input:not(:placeholder-shown):focus {
+  border: 1px solid #4B9200;
+}
+
 .subscribe__input:not(:placeholder-shown):valid {
   border: 1px solid #4B9200;
 }
@@ -1084,6 +1088,10 @@ h3 {
   left: -7px;
 }
 
+.scale__dots:hover {
+  background-color: #FE9013;
+}
+
 .scale__amount {
   position: relative;
   font-size: 2.6rem;
@@ -1110,6 +1118,7 @@ h3 {
   background: url("../img/backgrounds/Vector (2).svg");
   background-position: 95%;
   background-repeat: no-repeat;
+  outline: none;
 }
 .payment-amount::placeholder {
   color: #929699;
@@ -1119,12 +1128,29 @@ h3 {
   font-size: 16px;
   line-height: 140%;
 }
+.payment-amount::placeholder:focus {
+  color: #4B9200;
+}
 .payment-amount::-webkit-outer-spin-button, .payment-amount::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .payment-amount, .payment-amount:hover, .payment-amount:focus {
   appearance: none;
   -moz-appearance: textfield;
+}
+.payment-amount:focus {
+  border: 1px solid #4B9200;
+  color: #4B9200;
+}
+
+.payment-amount:not(:placeholder-shown):valid {
+  border: 1px solid #4B9200;
+  color: #4B9200;
+}
+
+.payment-amount:not(:placeholder-shown):invalid {
+  border: 1px solid #D31414;
+  color: #D31414;
 }
 
 .payment-type {
@@ -1248,6 +1274,9 @@ h3 {
   margin-top: 20px;
   margin-bottom: 30px;
   margin-right: auto;
+}
+.button_square a:hover {
+  color: inherit;
 }
 
 .button_submit {

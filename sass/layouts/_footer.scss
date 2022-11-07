@@ -125,7 +125,10 @@
     border: 1px solid $color-input-email-border;
 }
 
+.subscribe__input:not(:placeholder-shown):focus {
+    border: 1px solid $color-input-valid;
 
+}
 
 .subscribe__input:not(:placeholder-shown):valid {
     border: 1px solid $color-input-valid;
