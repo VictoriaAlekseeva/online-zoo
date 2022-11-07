@@ -1084,6 +1084,10 @@ h3 {
   left: -7px;
 }
 
+.scale__dots:hover {
+  background-color: #FE9013;
+}
+
 .scale__amount {
   position: relative;
   font-size: 2.6rem;
@@ -1248,6 +1252,9 @@ h3 {
   margin-top: 20px;
   margin-bottom: 30px;
   margin-right: auto;
+}
+.button_square a:hover {
+  color: inherit;
 }
 
 .button_submit {
