@@ -152,9 +152,7 @@
 
     }
 
-    &::placeholder:focus {
-        color: $color-input-valid;
-    }
+
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -171,6 +169,10 @@
     &:focus {
         border: 1px solid $color-input-valid;
         color: $color-input-valid;
+
+        &::-webkit-input-placeholder {
+            color: $color-input-valid;
+        }
     }
 }
 

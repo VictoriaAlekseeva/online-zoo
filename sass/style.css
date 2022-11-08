@@ -1156,9 +1156,6 @@ h3 {
   font-size: 16px;
   line-height: 140%;
 }
-.payment-amount::placeholder:focus {
-  color: #4B9200;
-}
 .payment-amount::-webkit-outer-spin-button, .payment-amount::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
@@ -1168,6 +1165,9 @@ h3 {
 }
 .payment-amount:focus {
   border: 1px solid #4B9200;
+  color: #4B9200;
+}
+.payment-amount:focus::-webkit-input-placeholder {
   color: #4B9200;
 }
 
