@@ -68,7 +68,7 @@
     position: absolute;
     z-index: -1;
     display: block;
-    top: 40%;
+    top: calc(48% - 1px);
     background-color: #72828E;
     height: 2px;
     width: calc(100% - 62px);
@@ -86,17 +86,17 @@
     &::after {
         content: '';
         position: absolute;
-        width: 39px;
-        height: 39px;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
-        bottom: -16px;
-        top: -16px;
-        left: -15px;
-        right: -16px;
+        bottom: calc(100% - 25.5px);
+        left: calc(100% - 25.5px);
     }
 
     &.active::after {
         content: '';
+        width: 39px;
+        height: 39px;
         border: 1px solid $color-text-colored;
     }
 
@@ -107,11 +107,8 @@
         height: 23px;
         border-radius: 50%;
         border: 1px solid $color-text-colored;
-        bottom: -8px;
-        top: -8px;
-        right: -9px;
-        left: -7px;
-
+        top: calc(50% - 12.5px);
+        left: calc(50% - 12.5px);
     }
 }
 
@@ -125,8 +122,6 @@
     color: #333B41;
     width: 58px;
     padding-top: 3px;
-
-
 }
 
 .donation__amount_text {
@@ -157,9 +152,7 @@
 
     }
 
-    &::placeholder:focus {
-        color: $color-input-valid;
-    }
+
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -176,6 +169,10 @@
     &:focus {
         border: 1px solid $color-input-valid;
         color: $color-input-valid;
+
+        &::-webkit-input-placeholder {
+            color: $color-input-valid;
+        }
     }
 }
 
@@ -222,10 +219,11 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
-        background-color: $color-input-range;
+        background-color: $color-input-valid;
+        border: 2px solid $color-input-valid;
         transform: translate(-50%, -50%);
         visibility: visible;
       }
