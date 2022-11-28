@@ -22,3 +22,34 @@
         border: 1px solid $color-link-active;
     }
 }
+
+.logo_header {
+
+    @include media-tablet {
+        &.logo {
+            width: 47px;
+            height: 29px;
+
+            @include font($size: 1.2rem, $height: 1.5rem, $weight: 300);
+            border: none;
+            background-size: 15%;
+            background-position: 14% bottom;
+            padding: 0px;
+        }
+
+    }
+}
+
+.footer__logo_mobile {
+    @include media-mobile {
+        &.logo {
+            width: 135px;
+            height: 23px;
+            border: none;
+            @include font($size: 1.9rem, $height: 2.3rem, $weight: 400);
+            background-position: 63% 60%;
+            margin: 0 auto;
+        }
+
+    }
+}

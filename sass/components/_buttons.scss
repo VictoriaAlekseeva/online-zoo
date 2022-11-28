@@ -25,6 +25,10 @@
     &_rounded {
         border-radius: 25px;
         margin: 30px auto;
+
+        @include media-mobile {
+            margin: 15px auto;
+        }
     }
 
     &_square {
