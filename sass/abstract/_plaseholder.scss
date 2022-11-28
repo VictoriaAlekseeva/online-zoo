@@ -5,3 +5,15 @@
 %font-prim {
     font-family: "Roboto", sans-serif;
 }
+
+%display-none-tablet {
+    @include media-tablet {
+        display: none;
+    }
+}
+
+%display-block-tablet {
+    @include media-tablet {
+        display: block;
+    }
+}
