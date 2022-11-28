@@ -2,19 +2,125 @@
     background-image: url(../img/backgrounds/flower_foto1.jpg);
     background-position: right 15%;
     background-repeat: no-repeat;
+    background-size: 12.75%;
+
+    @include media-small-desktop {
+        background: none;
+    }
+
+    @include media-tablet {
+        background-image: url("../img/backgrounds/640/flower_foto1.jpg");
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: 20.5%;
+    }
+
+    @include media-mobile {
+        background-image: url("../img/backgrounds/320/flower_foto1.jpg");
+        background-position: right -43px;
+        background-repeat: no-repeat;
+        background-size: 11%;
+        padding-top: 10px;
+    }
 }
-.backstage__img {
+
+.backstage__img__wrapper {
     display: block;
+    float: left;
+    margin-right: 87px;
+    margin-bottom: 30px;
+    width: 52.5%;
+
+    @include media-small-desktop {
+        width: 48.4%;
+        height: 40.8vw;
+        margin-right: 30px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    @include media-tablet {
+        display: none;
+    }
+
+}
+
+.backstage__img {
+    width: 100%;
+    object-fit: cover;
+
+    @include media-small-desktop {
+        height: 100%;
+        margin-right: 31px;
+        margin-bottom: 15px;
+
+    }
 }
 
 .backstage__content {
     padding: 140px 0px;
-    display: flex;
-    justify-content: space-between;
-    gap: 85px;
+
+    @include media-small-desktop {
+        padding: 100px 0px;
+    }
+
+    @include media-tablet {
+        padding: 60px 0px;
+    }
+
+    @include media-mobile {
+        padding: 15px 0;
+    }
+}
+
+.backstage__description {
+
+    @include media-small-desktop {
+        width: 99.9%;
+    }
+
+    @include media-tablet {
+        width: 82%;
+    }
+
+    & h2 {
+        @include media-tablet {
+        margin-left: 6px;
+
+        }
+
+        @include media-mobile {
+            margin-left: 0px;
+        }
+    }
+
+    @include media-mobile {
+        width: 98%;
+    }
+
+
 }
 
 .backstage__subtitle {
     padding: 54px 0px 34px;
+
+    @include media-tablet {
+        padding: 28px 0px 20px;
+        margin-left: 6px;
+    }
+
+    @include media-mobile {
+        padding: 20px 0px 10px;
+        margin-left: 0px;
+
+    }
+
+}
+
+.backstage__text {
+    
+    @include media-tablet {
+        line-height: 22px;
+    }
 
 }

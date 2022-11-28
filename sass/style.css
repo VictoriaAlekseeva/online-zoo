@@ -644,21 +644,130 @@ h3 {
   background-image: url(../img/backgrounds/flower_foto1.jpg);
   background-position: right 15%;
   background-repeat: no-repeat;
+  background-size: 12.75%;
+}
+@media (max-width: 1000px) {
+  .backstage {
+    background: none;
+  }
+}
+@media (max-width: 640px) {
+  .backstage {
+    background-image: url("../img/backgrounds/640/flower_foto1.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 20.5%;
+  }
+}
+@media (max-width: 320px) {
+  .backstage {
+    background-image: url("../img/backgrounds/320/flower_foto1.jpg");
+    background-position: right -43px;
+    background-repeat: no-repeat;
+    background-size: 11%;
+    padding-top: 10px;
+  }
+}
+
+.backstage__img__wrapper {
+  display: block;
+  float: left;
+  margin-right: 87px;
+  margin-bottom: 30px;
+  width: 52.5%;
+}
+@media (max-width: 1000px) {
+  .backstage__img__wrapper {
+    width: 48.4%;
+    height: 40.8vw;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 640px) {
+  .backstage__img__wrapper {
+    display: none;
+  }
 }
 
 .backstage__img {
-  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1000px) {
+  .backstage__img {
+    height: 100%;
+    margin-right: 31px;
+    margin-bottom: 15px;
+  }
 }
 
 .backstage__content {
   padding: 140px 0px;
-  display: flex;
-  justify-content: space-between;
-  gap: 85px;
+}
+@media (max-width: 1000px) {
+  .backstage__content {
+    padding: 100px 0px;
+  }
+}
+@media (max-width: 640px) {
+  .backstage__content {
+    padding: 60px 0px;
+  }
+}
+@media (max-width: 320px) {
+  .backstage__content {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .backstage__description {
+    width: 99.9%;
+  }
+}
+@media (max-width: 640px) {
+  .backstage__description {
+    width: 82%;
+  }
+}
+@media (max-width: 640px) {
+  .backstage__description h2 {
+    margin-left: 6px;
+  }
+}
+@media (max-width: 320px) {
+  .backstage__description h2 {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 320px) {
+  .backstage__description {
+    width: 98%;
+  }
 }
 
 .backstage__subtitle {
   padding: 54px 0px 34px;
+}
+@media (max-width: 640px) {
+  .backstage__subtitle {
+    padding: 28px 0px 20px;
+    margin-left: 6px;
+  }
+}
+@media (max-width: 320px) {
+  .backstage__subtitle {
+    padding: 20px 0px 10px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 640px) {
+  .backstage__text {
+    line-height: 22px;
+  }
 }
 
 .pets {
