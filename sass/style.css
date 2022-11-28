@@ -771,17 +771,54 @@ h3 {
 }
 
 .pets {
+  clear: both;
   padding: 34px 0px 70px;
   background: url("../img/backgrounds/palm_foto.jpg") no-repeat bottom left, url("../img/backgrounds/strelitzia 1.jpg") no-repeat bottom right;
+}
+@media (max-width: 1000px) {
+  .pets {
+    padding: 47px 0px 110px;
+    background: url("../img/backgrounds/1000/palm_foto.jpg") no-repeat bottom left, url("../img/backgrounds/1000/strelitzia 1.jpg") no-repeat bottom right;
+  }
+}
+@media (max-width: 640px) {
+  .pets {
+    padding: 20px 0px 70px;
+    background: url("../img/backgrounds/640/palm_foto.jpg") no-repeat bottom left, url("../img/backgrounds/640/strelitzia 1.jpg") no-repeat bottom right;
+  }
+}
+@media (max-width: 320px) {
+  .pets {
+    padding: 14px 0px 45px;
+    background: url("../img/backgrounds/320/palm_foto.jpg") no-repeat bottom left, url("../img/backgrounds/320/strelitzia 1.jpg") no-repeat bottom right;
+  }
 }
 
 .pets__wrapper {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  column-gap: 10px;
+  row-gap: 20px;
   justify-content: space-between;
   padding-bottom: 50px;
+}
+@media (max-width: 1000px) {
+  .pets__wrapper {
+    row-gap: 92px;
+  }
+}
+@media (max-width: 640px) {
+  .pets__wrapper {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .pets__wrapper {
+    flex-direction: column;
+    padding: 8px 8px 8px;
+    row-gap: 20px;
+  }
 }
 
 .pets__card {
@@ -789,6 +826,54 @@ h3 {
   display: block;
   border: 1px solid #F9804B;
   border-radius: 5px;
+  width: 31.65%;
+}
+.pets__card > picture {
+  width: 100%;
+}
+.pets__card > picture > img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 4px 4px 0 0;
+}
+@media (max-width: 1000px) {
+  .pets__card {
+    width: 31.2%;
+  }
+  .pets__card:nth-child(1) {
+    order: 1;
+  }
+  .pets__card:nth-child(2) {
+    order: 2;
+  }
+  .pets__card:nth-child(3) {
+    order: 3;
+  }
+  .pets__card:nth-child(4) {
+    order: 4;
+  }
+  .pets__card:nth-child(5) {
+    order: 5;
+  }
+  .pets__card:nth-child(6) {
+    order: 8;
+  }
+  .pets__card:nth-child(7) {
+    order: 3;
+  }
+  .pets__card:nth-child(8) {
+    order: 8;
+  }
+}
+@media (max-width: 640px) {
+  .pets__card {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 320px) {
+  .pets__card {
+    width: 100%;
+  }
 }
 
 @keyframes textup {
@@ -835,22 +920,66 @@ h3 {
   background-repeat: no-repeat;
   background-position: right;
 }
+@media (max-width: 640px) {
+  .pets__description_carnivorous {
+    background-size: 15%;
+  }
+}
 .pets__description_herbivores {
   background-image: url("../img/svg/banana-bamboo_icon.svg");
   background-repeat: no-repeat;
   background-position: right;
 }
+@media (max-width: 640px) {
+  .pets__description_herbivores {
+    background-size: 10%;
+  }
+}
+@media (max-width: 1000px) {
+  .pets__description {
+    margin-top: 4px;
+    margin-bottom: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .pets__description {
+    margin: 2px 6px 9px 12px;
+  }
+}
+@media (max-width: 320px) {
+  .pets__description {
+    margin: 4px 6px 9px 9px;
+  }
+}
 
 .pets__name {
   text-transform: uppercase;
   font-weight: 500;
+  width: 80%;
+}
+@media (max-width: 640px) {
+  .pets__name {
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem;
+  }
 }
 
 .pets__location {
+  width: 70%;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;
   line-height: 1.7rem;
+}
+@media (max-width: 640px) {
+  .pets__location {
+    font-size: 1.17rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.2rem;
+  }
 }
 
 .arrow {
@@ -864,14 +993,49 @@ h3 {
   transition: 0.3s;
   cursor: pointer;
 }
+@media (max-width: 1000px) {
+  .arrow {
+    top: 43.5%;
+  }
+}
+@media (max-width: 640px) {
+  .arrow {
+    top: calc(50% - 48px);
+  }
+}
+@media (max-width: 320px) {
+  .arrow {
+    display: none;
+  }
+}
 .arrow:active {
   background: #4B9200;
 }
 .arrow_left {
-  left: -7%;
+  right: calc(100% + 20px);
+}
+@media (max-width: 1000px) {
+  .arrow_left {
+    right: calc(50% + 85px);
+  }
+}
+@media (max-width: 640px) {
+  .arrow_left {
+    right: 52%;
+  }
 }
 .arrow_right {
-  right: -7%;
+  left: calc(100% + 20px);
+}
+@media (max-width: 1000px) {
+  .arrow_right {
+    left: calc(50% + 85px);
+  }
+}
+@media (max-width: 640px) {
+  .arrow_right {
+    left: calc(50% + 15px);
+  }
 }
 
 .right-arrow {
@@ -892,6 +1056,30 @@ h3 {
   background: url("../img/svg/arrow-left.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.pets__card_show {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .pets__card_show {
+    display: block;
+  }
+}
+
+.pets__card_hide {
+  display: block;
+}
+@media (max-width: 1000px) {
+  .pets__card_hide {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .pets__card_hide_tablet {
+    display: none;
+  }
 }
 
 .pick-and-feed {
