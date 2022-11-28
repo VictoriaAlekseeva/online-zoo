@@ -1,6 +1,18 @@
 .pick-and-feed {
     padding: 69px 0px 100px;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);;
+
+    @include media-small-desktop {
+        padding: 30px 3% 50px;
+    }
+
+    @include media-tablet {
+        padding: 20px 0px 20px;
+    }
+
+    @include media-mobile {
+        padding: 20px 10px;
+    }
 }
 
 
@@ -10,18 +22,77 @@
     border-radius: 20px;
     padding: 41px 100px 29px 100px;
 
-    h2 {
+    @include media-small-desktop {
+        padding: 30px 47px 20px 49px;
+    }
+
+    @include media-tablet {
+        padding: 10px 20px 28px 20px;
+    }
+
+    @include media-mobile {
+        padding: 20px 0px 35px;
+        text-align: center;
+    }
+
+    .h2_color  {
         color: $color-text-colored;
         text-align: center;
+
+        @include media-small-desktop {
+            padding-bottom: 10px;
+        }
+
+        @include media-tablet {
+            @include font($size: 4.2rem, $height: 5rem, $weight: 400);
+        }
+
+        @include media-mobile {
+            @include font($size: 2.4rem, $height: 2.88rem);
+            padding-bottom: 0px;
+        }
     }
 
     h3 {
         text-align: center;
         padding-top: 55px;
+
+        @include media-small-desktop {
+            padding-top: 35px;
+        }
+
+        @include media-tablet {
+            padding-top: 25px;
+        }
+
+        @include media-mobile {
+            @include font($size: 2.4rem, $height: 2.88rem, $weight: 400);
+            padding-top: 10px;
+        }
     }
 
     .subtitle {
         padding: 10px 0px 35px;
+
+        @include media-small-desktop {
+            padding: 12px 0px 10px;
+        }
+
+        @include media-tablet {
+            @include font($size: 2.2rem, $height: 2.64rem, $weight: 400);
+        }
+
+        @include media-mobile {
+            @include font($size: 1.8rem, $height: 2.16rem);
+
+        }
+    }
+
+    .button {
+        @include media-mobile {
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
     }
 
 }
@@ -33,6 +104,18 @@
         width: 110%;
         font-weight: 500;
 
+        @include media-small-desktop {
+            padding-top: 10px;
+            width: 95%;
+        }
+
+        @include media-tablet {
+            width: 100%;
+        }
+    }
+
+    @include media-mobile {
+        display: none;
     }
 }
 
@@ -42,51 +125,183 @@
 }
 
 .pick-and-feed__scheme {
-    width: 79.5%;
-    margin: auto;
     padding: 37px 0px 30px;
 
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include media-small-desktop {
+
+        gap: 2.5vw;
+        padding: 40px 2px 43px;
+    }
+
+    @include media-tablet {
+        position: relative;
+        justify-content: space-between;
+        // width: calc(100% - 13px);
+        padding: 19px 10px 17px 0px;
+        // margin-right: 13px;
+    }
+
+    @include media-mobile {
+        width: 100%;
+        padding: 10px 0px 0px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    }
+
 }
 .pick-and-feed__picture {
-    width: 168px;
-    height: 168px;
+    width: 100%;
+    height: 10.5vw;
     background-color: $color-background-light;
     border-radius: 5px;
     border: 1px solid $color-button;
+
+    @include media-small-desktop {
+        height: 16.8vw;
+        min-height: 120px;
+    }
+
+    @include media-tablet {
+        height: 26.3vw;
+        min-height: 80px;
+    }
+
+    @include media-mobile {
+        height: 52.5vw;
+    }
 
     &.card {
         background-image: url('../img/svg/pay.svg');
         background-position: center;
         background-repeat: no-repeat;
+        background-size: 66%;
     }
 
     &.plant {
         background-image: url('../img/svg/zoo.svg');
         background-position: center;
         background-repeat: no-repeat;
+        background-size: 55%;
     }
 
     &.animal {
         background-image: url('../img/svg/monkey.svg');
         background-position: center;
         background-repeat: no-repeat;
+        background-size: 77%;
     }
 }
 
 .pick-and-feed__text {
-    width: 168px;
+    width: 100%;
     text-align: left;
     padding-top: 30px;
+
+    @include media-mobile {
+        height: fit-content;
+        padding-top: 9px;
+        padding-bottom: 22px;
+    }
 }
 
-.pick-and-feed__arrow {
-    width: 69px;
-    height: 160px;
+.pick-and-feed__arrow_middle {
+    width: 8vw;
+    height: 9.5vw;
 
     background-image: url('../img/svg/Vector.svg');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain 75%;
+
+    @include media-small-desktop {
+        min-width: 75px;
+        height: 16vw;
+    }
+
+}
+
+.pick-and-feed__arrow_desktop {
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.pick-and-feed__arrow_tablet {
+
+
+    &_left {
+        right: calc(50% + 3.7vw);
+
+
+        @include media-mobile {
+            top: calc(100%/3 - 33px);
+            right: -14%;
+        }
+    }
+
+    &_right {
+        left: calc(49% - 2px);
+
+        @include media-mobile {
+            bottom: calc(100%/3 + 14px);
+            right: -14%;
+
+        }
+    }
+
+
+}
+
+.pick-and-feed__arrow_upper {
+    display: none;
+
+    @include media-tablet {
+        display: block;
+
+
+        position: absolute;
+        width: 30.5vw;
+        height: 6.3vw;
+
+        background-image: url('../img/svg/arrow.svg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 45%;
+
+        margin-top: -15px;
+    }
+
+    @include media-mobile {
+        width: 60vw;
+        height: 12vw;
+        transform: rotate(85deg)
+
+    }
+}
+
+
+.pick-and-feed__scheme__item {
+
+    width: 10.5vw;
+
+    @include media-small-desktop {
+        width: 16.8vw;
+        min-width: 120px;
+    }
+    @include media-tablet {
+        width: 26.3vw;
+        min-width: 80px;
+
+    }
+    @include media-mobile {
+        width: 52.5vw;
+        margin: 9px 0px 5px;
+    }
+
 
 }
