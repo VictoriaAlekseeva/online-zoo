@@ -15,8 +15,8 @@
   </head>
   <body>
     <header class="header">
-      <div class="wrapper header__wrapper">
-        <h1  class="logo"><a href="./index.html"> PetStory online</a></h1>
+      <div class="wrapper paddings header__wrapper ">
+        <h1  class="logo_header logo"><a href="./index.html"> PetStory online</a></h1>
         <nav class="header__navigation">
           <ul class="header__navigation__list">
             <li class="header__navigation__link active "><a href="./index.html#main" class="active " >About</a></li>
@@ -27,11 +27,14 @@
           </ul>
         </nav>
         <a class="header__design-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by &copy;</a>
+        <div class="burger-menu_button">
+          <span class="burger-menu_lines"></span>
+        </div>
       </div>
     </header>
     <main>
       <section class="main" id="main" >
-        <div class="wrapper">
+        <div class="wrapper paddings">
           <div class="main__content">
             <span class="main__circle"></span>
             <p class="main__text">
@@ -65,14 +68,13 @@
         </div>
       </section>
       <section class="pets">
-
         <div class="wrapper pets__wrapper">
           <span class="arrow arrow_left"><span class="left-arrow"></span> </span>
           <figure class="pets__card">
             <picture>
               <img class="pets__img" src="./img/pets/Rectangle 5.jpg" alt="Giant Pandas">
             </picture>
-            <figcaption class="pets__description pets__description_herbivores"> <!--carnivorous-->
+            <figcaption class="pets__description pets__description_herbivores">
               <p class="pets__name">Giant pandas</p>
               <p class="pets__location">Native to Southwest China</p>
             </figcaption>

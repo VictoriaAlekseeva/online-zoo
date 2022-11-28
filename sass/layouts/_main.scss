@@ -1,47 +1,145 @@
 .main {
-    background: url('../img/backgrounds/Giant_Panda.jpg');
-    background-repeat: no-repeat;
-    background-position: center -80px;
-    background-size: 100%;
+  background: url('../img/backgrounds/Giant_Panda.jpg');
+  background-repeat: no-repeat;
+  background-position: center 61%;
+  background-size: cover;
+  overflow: hidden;
 
-    &__content {
-        position: relative;
-        z-index: 10;
-        padding-top: 86px;
-        padding-bottom: 70px;
-        margin-left: auto;
-        max-width: 43%;
+  @include media-small-desktop {
+    background-size: 120%;
+    background-position: center 63.5%;
+
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, #000000, #000000);
+    box-shadow: 0px 4px 4px 0px #00000040;
+    box-shadow: 0px 4px 4px 0px #00000040;
+  }
+
+  @include media-tablet {
+    background: url('../img/backgrounds/640/Giant Panda.jpg');
+    border: none;
+    box-shadow: none;
+  }
+
+  @include media-mobile {
+    background: url('../img/backgrounds/320/Giant Panda.jpg') no-repeat center 33px,
+          url("../img/backgrounds/320/flower_foto1.jpg") no-repeat right 260px;
+  }
+
+
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    padding-top: 86px;
+    padding-bottom: 70px;
+    margin-left: auto;
+    width: 500px;
+
+    @include media-small-desktop {
+      padding-top: 42px;
+      padding-bottom: 16px;
+      width: 400px;
+      margin-right: 6%;
+  }
+
+    @include media-tablet {
+      width: 100%;
+      padding-top: 81px;
+      padding-bottom: 35px;
+      margin-right: -3px;
     }
 
-    &__text {
-        @include font($size: 10.7rem, $height: 8rem, $weight: 700);
-        text-align: center;
-        text-transform: uppercase;
-        color: $color-text-light;
-        padding-bottom: 30px;
+    @include media-mobile {
+      width: 100%;
+      padding-top: 76px;
+      padding-bottom: 1px;
+      margin-right: 0px;
     }
 
-    &_donation {
-        height: 385px;
-        background-position: center -200px;
+    .button {
+      @include media-tablet {
+        margin: 0;
+        margin-right: auto;
+        margin-top: -5px;
+      }
+
+      @include media-mobile {
+        margin: 5px 0;
+      }
     }
+  }
+
+  &__text {
+    @include font($size: 10.7rem, $height: 8rem, $weight: 700);
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-text-light;
+    padding-bottom: 30px;
+
+    @include media-small-desktop {
+      @include font($size: 8.52rem, $height: 6.39rem, $weight: 700);
+      padding-bottom: 13px;
+  }
+
+  @include media-tablet {
+    margin-left: auto;
+    width: 255px;
+    @include font($size: 5.4rem, $height: 4.1rem, $weight: 700);
+    padding-bottom: 0px;
+}
+
+@include media-mobile {
+    @include font($size: 2.8rem, $height: 2.1rem, $weight: 700);
+    width: 128px;
+    margin-left: auto;
+    margin-bottom: 61px;
+}
+  }
+
+  &_donation {
+    background-position: center -200px;
+  }
 }
 
 .main__circle {
-    position: absolute;
-    top: 2%;
-    right: 21%;
-    z-index: -1;
-    display: block;
-    width: 465px;
-    height: 465px;
-    border-radius: 465px;
-    background-color: $color-button;
+  position: absolute;
+  top: 2%;
+  right: 21%;
+  z-index: -1;
+  display: block;
+  width: 465px;
+  height: 465px;
+  border-radius: 50%;
+  background-color: $color-button;
+
+  @include media-small-desktop {
+    width: 367px;
+    height: 367px;
+    top: -10px;
+    right: 22.5%;
+}
+
+@include media-tablet {
+    width: 238px;
+    height: 238px;
+    top: 45px;
+    right: 9%;
+}
+
+@include media-mobile {
+    width: 119px;
+    height: 119px;
+    top: 19%;
+    right: 9%;
+
+}
 }
 
 
 .main__text_highlight {
-    color: $color-text-highlight;
+  color: $color-text-highlight;
 }
 
 

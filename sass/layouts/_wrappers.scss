@@ -1,4 +1,37 @@
 .wrapper {
-    max-width: 1160px;
+    max-width: $width-desktop;
     margin: 0 auto;
+
+    @include media-small-desktop {
+        max-width: $width-desktop-small;
+
+    }
+
+    @include media-tablet {
+        max-width: $width-tablet;
+
+    }
+
+    @include media-mobile {
+        max-width: $width-mobile;
+
+    }
+
+}
+
+.paddings {
+    padding: 0 13.75%;
+
+    @include media-small-desktop {
+        padding: 0 3%;
+    }
+
+    @include media-tablet {
+        padding: 0 3%;
+    }
+
+    @include media-mobile {
+        padding: 0 10px;
+    }
+
 }

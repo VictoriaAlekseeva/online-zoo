@@ -1,0 +1,30 @@
+.burger-menu_button{
+  display: none;
+  width: 18px;
+  height: 10px;
+
+  @include media-tablet{
+      display: block;
+  }
+
+}
+
+.burger-menu_lines, .burger-menu_lines::after, .burger-menu_lines::before {
+  position: absolute;
+  top: 40%;
+  width: 18px;
+  height: 2px;
+  background-color: $color-text-light;
+  border-radius: 2px;
+
+}
+
+.burger-menu_lines::before {
+  content: '';
+  top: -4px;
+}
+
+.burger-menu_lines::after {
+  content: '';
+  top: 4px;
+}

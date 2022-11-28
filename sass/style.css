@@ -6,10 +6,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -44,12 +42,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -57,10 +52,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -77,12 +70,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -100,10 +90,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -153,14 +141,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -168,8 +152,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -178,8 +161,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -228,18 +210,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -262,10 +238,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -281,10 +255,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -299,10 +271,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -354,6 +324,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media (max-width: 640px) {
+  .header__design-link, .header__navigation {
+    display: none;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -368,6 +344,14 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 2.2rem;
+}
+@media (max-width: 1000px) {
+  body {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1rem;
+  }
 }
 
 h2 {
@@ -394,14 +378,58 @@ h3 {
 }
 
 .wrapper {
-  max-width: 1160px;
+  max-width: 1600px;
   margin: 0 auto;
+}
+@media (max-width: 1000px) {
+  .wrapper {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 640px) {
+  .wrapper {
+    max-width: 640px;
+  }
+}
+@media (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+  }
+}
+
+.paddings {
+  padding: 0 13.75%;
+}
+@media (max-width: 1000px) {
+  .paddings {
+    padding: 0 3%;
+  }
+}
+@media (max-width: 640px) {
+  .paddings {
+    padding: 0 3%;
+  }
+}
+@media (max-width: 320px) {
+  .paddings {
+    padding: 0 10px;
+  }
 }
 
 .header {
-  padding: 14px 0px 14px 0px;
+  position: relative;
+  padding: 14px 0px;
   background-color: #000000;
   color: #FFFFFF;
+}
+@media (max-width: 640px) {
+  .header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    padding: 2px 0px;
+  }
 }
 
 .header__wrapper {
@@ -409,15 +437,32 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  .header__wrapper {
+    gap: 6.7%;
+  }
+}
 
 .header__navigation {
   margin-right: auto;
   margin-left: 35px;
 }
+@media (max-width: 1000px) {
+  .header__navigation {
+    flex-grow: 2;
+    margin: 0;
+  }
+}
 
 .header__navigation__list {
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 1000px) {
+  .header__navigation__list {
+    gap: 7.5%;
+    justify-content: flex-start;
+  }
 }
 
 .header__navigation__link {
@@ -425,12 +470,40 @@ h3 {
   padding: 0px 29px;
   cursor: pointer;
 }
+@media (max-width: 1000px) {
+  .header__navigation__link {
+    padding: 0px;
+  }
+}
 
 .main {
   background: url("../img/backgrounds/Giant_Panda.jpg");
   background-repeat: no-repeat;
-  background-position: center -80px;
-  background-size: 100%;
+  background-position: center 61%;
+  background-size: cover;
+  overflow: hidden;
+}
+@media (max-width: 1000px) {
+  .main {
+    background-size: 120%;
+    background-position: center 63.5%;
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #000000, #000000);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  }
+}
+@media (max-width: 640px) {
+  .main {
+    background: url("../img/backgrounds/640/Giant Panda.jpg");
+    border: none;
+    box-shadow: none;
+  }
+}
+@media (max-width: 320px) {
+  .main {
+    background: url("../img/backgrounds/320/Giant Panda.jpg") no-repeat center 33px, url("../img/backgrounds/320/flower_foto1.jpg") no-repeat right 260px;
+  }
 }
 .main__content {
   position: relative;
@@ -438,7 +511,43 @@ h3 {
   padding-top: 86px;
   padding-bottom: 70px;
   margin-left: auto;
-  max-width: 43%;
+  width: 500px;
+}
+@media (max-width: 1000px) {
+  .main__content {
+    padding-top: 42px;
+    padding-bottom: 16px;
+    width: 400px;
+    margin-right: 6%;
+  }
+}
+@media (max-width: 640px) {
+  .main__content {
+    width: 100%;
+    padding-top: 81px;
+    padding-bottom: 35px;
+    margin-right: -3px;
+  }
+}
+@media (max-width: 320px) {
+  .main__content {
+    width: 100%;
+    padding-top: 76px;
+    padding-bottom: 1px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 640px) {
+  .main__content .button {
+    margin: 0;
+    margin-right: auto;
+    margin-top: -5px;
+  }
+}
+@media (max-width: 320px) {
+  .main__content .button {
+    margin: 5px 0;
+  }
 }
 .main__text {
   font-size: 10.7rem;
@@ -450,8 +559,38 @@ h3 {
   color: #FFFFFF;
   padding-bottom: 30px;
 }
+@media (max-width: 1000px) {
+  .main__text {
+    font-size: 8.52rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 6.39rem;
+    padding-bottom: 13px;
+  }
+}
+@media (max-width: 640px) {
+  .main__text {
+    margin-left: auto;
+    width: 255px;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.1rem;
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 320px) {
+  .main__text {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.1rem;
+    width: 128px;
+    margin-left: auto;
+    margin-bottom: 61px;
+  }
+}
 .main_donation {
-  height: 385px;
   background-position: center -200px;
 }
 
@@ -463,8 +602,32 @@ h3 {
   display: block;
   width: 465px;
   height: 465px;
-  border-radius: 465px;
+  border-radius: 50%;
   background-color: #F9804B;
+}
+@media (max-width: 1000px) {
+  .main__circle {
+    width: 367px;
+    height: 367px;
+    top: -10px;
+    right: 22.5%;
+  }
+}
+@media (max-width: 640px) {
+  .main__circle {
+    width: 238px;
+    height: 238px;
+    top: 45px;
+    right: 9%;
+  }
+}
+@media (max-width: 320px) {
+  .main__circle {
+    width: 119px;
+    height: 119px;
+    top: 19%;
+    right: 9%;
+  }
 }
 
 .main__text_highlight {
@@ -1298,6 +1461,11 @@ h3 {
   border-radius: 25px;
   margin: 30px auto;
 }
+@media (max-width: 320px) {
+  .button_rounded {
+    margin: 15px auto;
+  }
+}
 .button_square {
   border-radius: 5px;
   margin-top: 20px;
@@ -1351,6 +1519,35 @@ h3 {
   border: 1px solid #F9804B;
 }
 
+@media (max-width: 640px) {
+  .logo_header.logo {
+    width: 47px;
+    height: 29px;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5rem;
+    border: none;
+    background-size: 15%;
+    background-position: 14% bottom;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer__logo_mobile.logo {
+    width: 135px;
+    height: 23px;
+    border: none;
+    font-size: 1.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.3rem;
+    background-position: 63% 60%;
+    margin: 0 auto;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -1371,6 +1568,36 @@ a:active {
 }
 .active:hover {
   color: #FE9013;
+}
+
+.burger-menu_button {
+  display: none;
+  width: 18px;
+  height: 10px;
+}
+@media (max-width: 640px) {
+  .burger-menu_button {
+    display: block;
+  }
+}
+
+.burger-menu_lines, .burger-menu_lines::after, .burger-menu_lines::before {
+  position: absolute;
+  top: 40%;
+  width: 18px;
+  height: 2px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+}
+
+.burger-menu_lines::before {
+  content: "";
+  top: -4px;
+}
+
+.burger-menu_lines::after {
+  content: "";
+  top: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
