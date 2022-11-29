@@ -382,11 +382,6 @@
 
 }
 
-.donation__amount_text {
-    padding-left: 4px;
-    margin-bottom: 17px;
-}
-
 .payment-amount {
     display: block;
     height: 54px;
@@ -567,8 +562,9 @@
 
     @include media-mobile {
         @include font($size: 4.06rem, $height: 3.25rem, $weight: 500, $style: normal);
-        margin-top: 45px;
+        margin-top: 40px;
         margin-bottom: 5px;
+        width: 70%;
     }
 }
 
@@ -600,7 +596,7 @@
         margin-right: 50px;
     }
     @include media-mobile {
-        margin: 0;
+        margin-right: 25px;
     }
 
     @include media-mobile {
