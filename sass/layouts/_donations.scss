@@ -5,17 +5,77 @@
     padding: 40px 0 180px;
     color: $color-text-light;
 
+    @include media-small-desktop {
+        padding-bottom: 30px;
+    }
+
+    @include media-tablet {
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
+
+    @include media-mobile {
+        padding-bottom: 22px;
+    }
+}
+
+.main_donation {
+    height: 387px;
+    background-position: center;
+
+    @include media-small-desktop {
+        height: 390px;
+        background-position: 30% center;
+        background-size: 160%;
+    }
+
+    @include media-tablet {
+        height: 370px;
+        background-position: 37% 47%;
+        background-size: 215%;
+    }
+
+    @include media-mobile {
+        height: 222px;
+        background-position: 27% 37%;
+        background-size: 200%;
+    }
 }
 
 .h3_donation {
     text-transform: uppercase;
     margin-bottom: 10px;
 
+    @include media-small-desktop {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    @include media-tablet {
+        @include font($size:2.4rem, $height: 2.88rem, $weight: 300, $style: normal);
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
     &_color {
         text-transform: none;
         margin-top: 48px;
         color: $color-text-colored;
         margin-bottom: 60px;
+
+        @include media-small-desktop {
+            margin-bottom: 40px;
+        }
+
+        @include media-tablet {
+            @include font($size:3.6rem, $height: 4.68rem, $weight: 300, $style: normal);
+            margin: 30px 0px;
+        }
+
+        @include media-mobile {
+            @include font($size:2.4rem, $height: 2.88rem, $weight: 300, $style: normal);
+            margin: 35px 0px 30px;
+        }
     }
 }
 
@@ -28,19 +88,68 @@
 .h2_donation {
     padding-bottom: 10px;
     margin-left: -8px;
+    color: $color-text-colored;
+    text-align: center;
+
+    @include media-tablet {
+        @include font($size:4.8rem, $height: 5.76rem, $weight: 400, $style: normal);
+    }
+
+    @include media-mobile {
+        @include font($size:2.4rem, $height: 2.88rem, $weight: 400, $style: normal);
+        margin: 0;
+        padding-bottom: 5px;
+
+    }
 }
 
 .pick-and-feed__wrapper_donation {
     color: $color-text-dark;
     padding: 40px 92px 62px;
 
+    @include media-small-desktop {
+        padding: 20px 46px 46px;
+    }
+
+    @include media-tablet {
+        padding: 32px 0;
+    }
+
+    @include media-mobile {
+        padding: 20px 0;
+    }
+
+    .subtitle {
+        @include media-small-desktop {
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .donation__subtitle {
+        @include media-tablet {
+            padding: 10px;
+            text-align: center;
+            font-size: 2.4rem;
+            line-height: 2.88rem;
+        }
+
+        @include media-mobile {
+            @include font($size:1.6rem, $height: 2.24rem, $weight: 400, $style: normal);
+            padding: 5px 0px;
+            text-align: center;
+        }
+    }
 }
 
 
 .payment-options {
-    width: 25%;
-    margin: auto;
+    width: 100%;
     margin-top: 50px;
+
+    @include media-mobile {
+        margin-top: 27px;
+    }
 }
 
 .donation__amount__scale__list {
@@ -51,17 +160,60 @@
     justify-content: space-between;
     margin: 10px 0px;
 
+    @include media-small-desktop {
+        margin: 13px 4px 13px 2px;
+    }
+
+    @include media-tablet {
+        margin: 10px 0px;
+    }
+
+    @include media-mobile {
+        margin: 5px 0px 5px;
+    }
+
     &_dots {
         background-color: #404950;
         width: 100%;
         height: 27px;
         border-radius: 2px;
         padding: 8px 30px 8px 26px;
+
+        @include media-small-desktop {
+            padding: 8px 13px 8px 13px;
+        }
+
+        @include media-tablet {
+            padding: 8px 35px;
+        }
+
+        @include media-mobile {
+            height: 13px;
+            padding: 4px 17px;
+        }
     }
 
     &_amount {
-        padding-right: 10px;
+
         cursor: pointer;
+
+        @include media-small-desktop {
+
+            width: 101%;
+        }
+
+        @include media-tablet {
+            & .active_tablet {
+                color: $color-text-colored;
+            }
+
+            padding: 0px 10px 0px 10px;
+            width: 100%;
+        }
+
+        @include media-mobile {
+            padding: 0 7px;
+        }
     }
 }
 .dots__line {
@@ -72,6 +224,17 @@
     background-color: #72828E;
     height: 2px;
     width: calc(100% - 62px);
+
+    @include media-small-desktop {
+        width: calc(100% - 26px);
+    }
+
+    @include media-tablet {
+        width: calc(100% - 70px);
+    }
+    @include media-mobile {
+        width: calc(100% - 34px);
+    }
 }
 
 
@@ -79,24 +242,35 @@
     position: relative;
     width: 10px;
     height: 10px;
-    border-radius: 10px;
+    border-radius: 50%;
     background-color: $color-dots;
     cursor: pointer;
+
+    @include media-mobile {
+        width: 5px;
+        height: 5px;
+    }
 
     &::after {
         content: '';
         position: absolute;
-        width: 48px;
-        height: 48px;
+        width: 39px;
+        height: 39px;
         border-radius: 50%;
-        bottom: calc(100% - 25.5px);
-        left: calc(100% - 25.5px);
+        bottom: calc(50% - 20px);
+        left: calc(50% - 20px);
+
+        @include media-mobile {
+            width: 20px;
+            height: 20px;
+
+            bottom: calc(50% - 10px);
+            right: calc(50% - 11px);
+        }
     }
 
     &.active::after {
         content: '';
-        width: 39px;
-        height: 39px;
         border: 1px solid $color-text-colored;
     }
 
@@ -109,6 +283,43 @@
         border: 1px solid $color-text-colored;
         top: calc(50% - 12.5px);
         left: calc(50% - 12.5px);
+
+        @include media-mobile {
+            width: 10px;
+            height: 10px;
+            bottom: calc(50% - 5.5px);
+            right: calc(50% - 6.4px);
+        }
+    }
+
+    &.active_tablet { //! remove after js will be added
+
+        @include media-tablet {
+            display: block;
+
+            &::after {
+                content: '';
+                border: 1px solid $color-text-colored;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                border: 1px solid $color-text-colored;
+                bottom: calc(50% - 12px);
+                right: calc(50% - 12px);
+
+                @include media-mobile {
+                    width: 10px;
+                    height: 10px;
+                    bottom: calc(50% - 5.5px);
+                    right: calc(50% - 6.4px);
+                }
+            }
+        }
     }
 }
 
@@ -116,12 +327,59 @@
     background-color: $color-text-colored;
 }
 
+.donation__amount {
+    @include media-small-desktop {
+        padding: 15px 17px 0px;
+    }
+
+    @include media-tablet {
+        padding: 0px 0px 0px;
+    }
+
+    @include media-mobile {
+        text-align: left;
+    }
+
+    &_text {
+        padding-left: 4px;
+        margin-bottom: 17px;
+
+        @include media-tablet {
+            padding-left: 12px;
+            margin-bottom: 0px;
+        }
+
+        @include media-mobile {
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
 .scale__amount {
     position: relative;
     @include font($size:2.6rem, $height: 3.6rem, $weight: 500, $style: normal);
     color: #333B41;
-    width: 58px;
+    width: 82px;
     padding-top: 3px;
+    text-align: center;
+
+    @include media-small-desktop {
+        width: 70px;
+        text-align: right;
+    }
+
+    @include media-tablet {
+        text-align: center;
+    }
+
+    @include media-mobile {
+        @include font($size:1.3rem, $height: 1.8rem, $weight: 500, $style: normal);
+        padding-top: 0px;
+        width: 30px;
+    }
+
 }
 
 .donation__amount_text {
@@ -130,9 +388,10 @@
 }
 
 .payment-amount {
+    display: block;
     height: 54px;
     width: 268px;
-    margin-left: -12px;
+    margin: 0 auto;
 
     padding: 16px 9px;
     border: 1px solid #929699;
@@ -142,6 +401,17 @@
     background-repeat: no-repeat;
     outline: none;
 
+    @include media-tablet {
+        height: 42px;
+        width: 180px;
+        margin: 0 auto;
+
+    }
+
+    @include media-mobile {
+        padding-left: 7px;
+    }
+
     &::placeholder {
         color: #929699;
         font-family: 'Roboto';
@@ -149,10 +419,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 140%;
-
     }
-
-
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -226,26 +493,62 @@
         border: 2px solid $color-input-valid;
         transform: translate(-50%, -50%);
         visibility: visible;
-      }
-
-
+    }
 }
 
-
+.animal-food-counter {
+    @include media-tablet {
+        width: 159px;
+    }
+}
 
 .animal-and-food {
-    width: 60%;
-    margin: auto;
-    margin-left: 215px;
+    width: 550px;
+    margin: 0 auto;
     margin-top: 25px;
     margin-bottom: 47px;
     display: flex;
     align-items: center;
     gap: 7px;
+
+    @include media-small-desktop {
+        width: 65%;
+        margin: 35px auto;
+    }
+
+    @include media-tablet {
+        width: 88%;
+        margin-left: 5%;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    @include media-mobile {
+        width: 100%;
+        padding: 5px 0px;
+        margin: 0px 0px;
+        justify-content: space-between;
+    }
 }
 
 .animal-to-feed_picture {
     display: block;
+    width: 52%;
+
+    @include media-small-desktop {
+        width: 51.5%;
+    }
+
+    @include media-tablet {
+        width: 53%;
+    }
+
+    @include media-mobile {
+        width: 53%;
+    }
 }
 
 .diet__counter {
@@ -253,12 +556,32 @@
     text-align: center;
     margin-top: 60px;
     margin-bottom: 10px;
+
+    @include media-small-desktop {
+        margin-top: 75px;
+    }
+
+    @include media-tablet {
+        margin-top: 65px;
+    }
+
+    @include media-mobile {
+        @include font($size: 4.06rem, $height: 3.25rem, $weight: 500, $style: normal);
+        margin-top: 45px;
+        margin-bottom: 5px;
+    }
 }
 
 .animal-to-feed_description {
     text-align: left;
     color: #333B41;
     margin-bottom: 10px;
+    text-align: center;
+
+    @include media-mobile {
+        @include font($size: 0.9rem, $height: 1.26rem, $weight: 400, $style: normal);
+        width: 90px;
+    }
 }
 
 .animal-and-food__times {
@@ -268,17 +591,73 @@
 
     margin-right: 55px;
     text-align: left;
+
+    @include media-small-desktop {
+        margin-top: 30px;
+    }
+
+    @include media-tablet {
+        margin-right: 50px;
+    }
+    @include media-mobile {
+        margin: 0;
+    }
+
+    @include media-mobile {
+        @include font($size:2rem, $height: 0.8rem, $weight: 300, $style: normal);
+        margin-top: 10px;
+        margin-left: -30px;
+    }
 }
 
 
 .payment-frequency {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    width: 220px;
     margin: auto;
-    margin-left: -12px;
+    padding-right: 20px;
+
+    @include media-small-desktop {
+        gap: 40px;
+    }
+
+    @include media-tablet {
+        margin-top: 5px;
+        justify-content: center;
+        gap: 43px;
+    }
+
+    @include media-mobile {
+        margin-top: 2px;
+        gap: 10px;
+        justify-content: space-between;
+
+        margin-bottom: 25px;
+    }
 }
 
 .donation__share_text {
     text-align: center;
+
+    @include media-mobile {
+        @include font($size:1.6rem, $height: 2.2rem, $weight: 400, $style: normal);
+        margin-left: -2px;
+        margin-top: 30px;
+    }
+}
+
+.hide{
+
+    &_small_desktop {
+    @include media-small-desktop {
+        display: none;
+    }
+
+    &_tablet {
+        @include media-tablet {
+            display: none;
+        }
+    }
+}
 }
