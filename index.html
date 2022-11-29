@@ -299,44 +299,46 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="wrapper footer__wrapper">
-        <div class="footer__column footer__column_links">
-          <a href="./index.html" class="logo">PetStory online</a>
-          <button class="button button_square"> <a href="./donation.html">Donate for volunteers</a></button>
-          <div class="social-links">
-            <ul class="social-links__list">
-              <li> <a class="social-links__link" href="https://www.facebook.com">
-                <div class="social-links__link_logo facebook"></div>Facebook</a></li>
-              <li> <a class="social-links__link" href="https://www.twitter.com">
-                <div class="social-links__link_logo twitter"></div>Twitter</a></li>
-              <li> <a class="social-links__link" href="https://www.instagram.com">
-                <div class="social-links__link_logo instagram"></div> Instagram</a></li>
-              <li> <a class="social-links__link" href="https://www.youtube.com">
-                <div class="social-links__link_logo youtube"></div>YouTube</a></li>
-            </ul>
-          </div>
+      <div class="wrapper paddings">
+        <div class="footer__wrapper">
+
+            <a href="./index.html" class="footer__logo_mobile logo">PetStory online</a>
+            <form class="subscribe hide_tablet">
+              <label class="subtitle subscribe_subtitle"> Subscribe to our news </label>
+              <div>
+                <input class="subscribe__input" type="email" placeholder="Enter your email" required/>
+                <button type="submit" class="button_submit">Submit</button>
+              </div>
+              </form>
+            <button class="button button_square donate_button"> <a href="./donation.html">Donate for volunteers</a></button>
+            <div class="social-links">
+              <ul class="social-links__list">
+                <li> <a class="social-links__link" href="https://www.facebook.com">
+                  <div class="social-links__link_logo facebook"></div>Facebook</a></li>
+                <li> <a class="social-links__link" href="https://www.twitter.com">
+                  <div class="social-links__link_logo twitter"></div>Twitter</a></li>
+                <li> <a class="social-links__link" href="https://www.instagram.com">
+                  <div class="social-links__link_logo instagram"></div> Instagram</a></li>
+                <li> <a class="social-links__link" href="https://www.youtube.com">
+                  <div class="social-links__link_logo youtube"></div>YouTube</a></li>
+              </ul>
+            </div>
+            <nav class="footer__navigation">
+              <ul class="footer__navigation__list">
+                <li class="footer__navigation__link active not_interactive"><a href="./index.html#main" class="active not_interactive" >About</a></li>
+                <li class="footer__navigation__link"><a href="#">Map</a></li>
+                <li class="footer__navigation__link"><a href="#">Zoos</a></li>
+                <li class="footer__navigation__link"><a href="#">Contact us</a></li>
+              </ul>
+            </nav>
+            <div class="creator_info">
+              <p>Designed by Alisa Samborskaya&nbsp;&nbsp;</p>
+              <p>©RSSchool & ©Yem Digital 2021</p>
+            </div>
+
+
         </div>
-        <div class="footer__column footer__column_nav">
-          <nav class="footer__navigation">
-            <ul class="footer__navigation__list">
-              <li class="footer__navigation__link active not_interactive"><a href="./index.html#main" class="active not_interactive" >About</a></li>
-              <li class="footer__navigation__link"><a href="#">Map</a></li>
-              <li class="footer__navigation__link"><a href="#">Zoos</a></li>
-              <li class="footer__navigation__link"><a href="#">Contact us</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer__column footer__column_subscribe">
-          <form class="subscribe">
-            <label class="subtitle subscribe_subtitle"> Subscribe to our news </label>
-              <input class="subscribe__input" type="email" placeholder="Enter your email" required/>
-              <button type="submit" class="button_submit">Submit</button>
-          </form>
-          <div class="creator_info">
-            <p>Designed by Alisa Samborskaya&nbsp;&nbsp;</p>
-            <p>©RSSchool & ©Yem Digital 2021</p>
-          </div>
-        </div>
+
       </div>
     </footer>
     <script src="./index.js"></script>
