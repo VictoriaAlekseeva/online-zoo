@@ -1840,14 +1840,10 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 640px) {
+@media (max-width: 320px) {
   .social-links__list {
     flex-direction: row;
     justify-content: space-between;
-  }
-}
-@media (max-width: 320px) {
-  .social-links__list {
     margin-top: 10px;
   }
 }
@@ -1939,6 +1935,12 @@ h3 {
 
 @media (max-width: 640px) {
   .hide_tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .social-links__link_name {
     display: none;
   }
 }
