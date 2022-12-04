@@ -6,8 +6,9 @@
   overflow: hidden;
 
   @include media-small-desktop {
-    background-size: 120%;
+    background-size: cover 120%;
     background-position: center 63.5%;
+    background-repeat: no-repeat;
 
     border-bottom: 1px solid;
     border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -18,16 +19,20 @@
 
   @include media-tablet {
     background: url('../img/backgrounds/640/Giant Panda.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     border: none;
     box-shadow: none;
   }
 
   @include media-mobile {
-    background: url('../img/backgrounds/320/Giant Panda.jpg') no-repeat center 33px,
-          url("../img/backgrounds/320/flower_foto1.jpg") no-repeat right 260px;
+
+    background-image: url('../img/backgrounds/320/Giant Panda.jpg'),
+                      url("../img/backgrounds/320/flower_foto1.jpg");
+    background-repeat: no-repeat no-repeat;
+    background-position: center 33px, right 260px;
+    background-size: 100% 187px, 11%;
   }
-
-
 
   &__content {
     position: relative;
