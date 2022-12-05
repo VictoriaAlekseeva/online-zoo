@@ -37,3 +37,53 @@ let rangeValue = function(){
 }
 
 input.addEventListener("input", rangeValue);
+
+//testimonials popup
+
+let popupWrapper = document.querySelector('.testimonials-popup__wrapper');
+
+let closePopupButton = document.querySelector('.testimonials-popup__close');
+
+let testimonials = document.querySelector('.testimonials__cards__wrapper');
+
+let popupAvatar = document.querySelector('.testimonials-popup__avatar');
+let pupupName = document.querySelector('.testimonials-popup__name');
+let popupLacal = document.querySelector('.testimonials-popup__location-and-date');
+let popupText = document.querySelector('.testimonials-popup__text');
+
+
+function closePopup() {
+  popupWrapper.classList.remove('testimonials-popup_active')
+}
+
+function openPopup() {
+  popupWrapper.classList.add('testimonials-popup_active')
+}
+
+
+
+closePopupButton.addEventListener('click', closePopup);
+popupWrapper.addEventListener('click', (event) => {
+  if (event.target.closest('.testimonials-popup__border')) return;
+  closePopup();
+});
+
+testimonials.onclick = function(event) {
+  let testimonial = event.target.closest('.testimonials__item_border');
+
+  let userAvatar = testimonial.querySelector('.user__avatar');
+  let userName = testimonial.querySelector('.user__name');
+  let userLocation = testimonial.querySelector('.user__location-and-date');
+  let testimonialText = testimonial.querySelector('.testimonials__text');
+
+  if (!testimonial) return;
+
+  popupAvatar.src = userAvatar.src;
+  pupupName.innerHTML = userName.innerHTML;
+  popupLacal.innerHTML = userLocation.innerHTML;
+  popupText.innerHTML = testimonialText.innerHTML;
+
+  openPopup();
+}
+
+
