@@ -18,3 +18,22 @@ burgerOverlay.addEventListener('click', closeMenu);
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 
 
+//input in testimonials
+
+let input = document.querySelector('.testimonials__input');
+
+let rangeValue = function(){
+  let newInputValue = input.value;
+  let target = document.querySelector('.testimonials__cards__wrapper'); //блок, который будет двигаться
+  let wrapperWidth = document.querySelector('.testimonials__wrapper_hidden').offsetWidth; //ширина враппера по которой определяем размер карточек
+  let blockWidth = document.querySelector('.testimonials__item_border').offsetWidth; //ширина карточки в блоке
+  let gap;
+
+  if (wrapperWidth <= 940) {
+    gap = (wrapperWidth - blockWidth * 3)/3 + 3;
+  } else  gap = (wrapperWidth - blockWidth * 4)/3 - 2;
+  let x = newInputValue * (blockWidth + gap); //вычисляем на сколько картичек сдвигать, 9.167 - отношение ширины карточки к гапу
+  target.style.marginLeft = `-${x}px`;
+}
+
+input.addEventListener("input", rangeValue);
