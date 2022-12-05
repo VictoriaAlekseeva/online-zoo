@@ -2352,14 +2352,6 @@ h3 {
   bottom: calc(50% - 20px);
   left: calc(50% - 20px);
 }
-@media (max-width: 480px) {
-  .scale__dots::after {
-    width: 20px;
-    height: 20px;
-    bottom: calc(50% - 10px);
-    right: calc(50% - 11px);
-  }
-}
 .scale__dots.active::after {
   content: "";
   border: 1px solid #FE9013;
@@ -2390,6 +2382,16 @@ h3 {
     content: "";
     border: 1px solid #FE9013;
   }
+}
+@media (max-width: 740px) and (max-width: 480px) {
+  .scale__dots.active_tablet::after {
+    width: 20px;
+    height: 20px;
+    bottom: calc(50% - 10px);
+    left: calc(50% - 11px);
+  }
+}
+@media (max-width: 740px) {
   .scale__dots.active_tablet::before {
     content: "";
     position: absolute;
