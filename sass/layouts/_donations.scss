@@ -31,8 +31,8 @@
 
     @include media-tablet {
         height: 370px;
-        background-position: 37% 47%;
-        background-size: 215%;
+        background-position: 32% 45%;
+        background-size: 180%;
     }
 
     @include media-mobile {
@@ -260,13 +260,7 @@
         bottom: calc(50% - 20px);
         left: calc(50% - 20px);
 
-        @include media-mobile {
-            width: 20px;
-            height: 20px;
 
-            bottom: calc(50% - 10px);
-            right: calc(50% - 11px);
-        }
     }
 
     &.active::after {
@@ -300,6 +294,14 @@
             &::after {
                 content: '';
                 border: 1px solid $color-text-colored;
+
+                @include media-mobile {
+                    width: 20px;
+                    height: 20px;
+
+                    bottom: calc(50% - 10px);
+                    left: calc(50% - 11px);
+                }
             }
 
             &::before {

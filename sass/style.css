@@ -502,8 +502,9 @@ h3 {
 }
 @media (max-width: 1200px) {
   .main {
-    background-size: 120%;
+    background-size: cover 120%;
     background-position: center 63.5%;
+    background-repeat: no-repeat;
     border-bottom: 1px solid;
     border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #000000, #000000);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
@@ -513,13 +514,18 @@ h3 {
 @media (max-width: 740px) {
   .main {
     background: url("../img/backgrounds/640/Giant Panda.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     border: none;
     box-shadow: none;
   }
 }
 @media (max-width: 480px) {
   .main {
-    background: url("../img/backgrounds/320/Giant Panda.jpg") no-repeat center 33px, url("../img/backgrounds/320/flower_foto1.jpg") no-repeat right 260px;
+    background-image: url("../img/backgrounds/320/Giant Panda.jpg"), url("../img/backgrounds/320/flower_foto1.jpg");
+    background-repeat: no-repeat no-repeat;
+    background-position: center 33px, right 260px;
+    background-size: 100% 187px, 11%;
   }
 }
 .main__content {
@@ -2081,8 +2087,8 @@ h3 {
 @media (max-width: 740px) {
   .main_donation {
     height: 370px;
-    background-position: 37% 47%;
-    background-size: 215%;
+    background-position: 32% 45%;
+    background-size: 180%;
   }
 }
 @media (max-width: 480px) {
@@ -2346,14 +2352,6 @@ h3 {
   bottom: calc(50% - 20px);
   left: calc(50% - 20px);
 }
-@media (max-width: 480px) {
-  .scale__dots::after {
-    width: 20px;
-    height: 20px;
-    bottom: calc(50% - 10px);
-    right: calc(50% - 11px);
-  }
-}
 .scale__dots.active::after {
   content: "";
   border: 1px solid #FE9013;
@@ -2384,6 +2382,16 @@ h3 {
     content: "";
     border: 1px solid #FE9013;
   }
+}
+@media (max-width: 740px) and (max-width: 480px) {
+  .scale__dots.active_tablet::after {
+    width: 20px;
+    height: 20px;
+    bottom: calc(50% - 10px);
+    left: calc(50% - 11px);
+  }
+}
+@media (max-width: 740px) {
   .scale__dots.active_tablet::before {
     content: "";
     position: absolute;
