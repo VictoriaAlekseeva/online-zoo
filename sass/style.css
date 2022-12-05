@@ -2886,6 +2886,26 @@ h3 {
   }
 }
 
+.logo.burger-menu__logo {
+  width: 66px;
+  height: 42px;
+  background-image: url("../img/svg/bamboo_active.svg");
+  border: 1px solid #FE9013;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8rem;
+  background-position: 10% 80%;
+  color: #FE9013;
+  border-color: #FE9013;
+}
+@media (max-width: 480px) {
+  .logo.burger-menu__logo {
+    width: 66px;
+    height: 42px;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -2908,18 +2928,20 @@ a:active {
   color: #FE9013;
 }
 
-.burger-menu_button {
+.burger-menu__button {
   display: none;
   width: 18px;
   height: 10px;
 }
 @media (max-width: 740px) {
-  .burger-menu_button {
+  .burger-menu__button {
     display: block;
+    position: relative;
+    z-index: 50;
   }
 }
 
-.burger-menu_lines, .burger-menu_lines::after, .burger-menu_lines::before {
+.burger-menu__lines, .burger-menu__lines::after, .burger-menu__lines::before {
   position: absolute;
   top: 40%;
   width: 18px;
@@ -2928,14 +2950,78 @@ a:active {
   border-radius: 2px;
 }
 
-.burger-menu_lines::before {
+.burger-menu__lines::before {
   content: "";
   top: -4px;
 }
 
-.burger-menu_lines::after {
+.burger-menu__lines::after {
   content: "";
   top: 4px;
+}
+
+.burger-menu__nav {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+}
+@media (max-width: 740px) {
+  .burger-menu {
+    display: block;
+  }
+  .burger-menu.burger-menu_active .burger-menu__nav {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 110vw;
+    padding: 10px;
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+  .burger-menu.burger-menu_active .burger-menu__lines, .burger-menu.burger-menu_active .burger-menu__lines::after, .burger-menu.burger-menu_active .burger-menu__lines::before {
+    background-color: #000000;
+    transition: 0.3s;
+  }
+  .burger-menu.burger-menu_active .burger-menu__lines {
+    background-color: transparent;
+  }
+  .burger-menu.burger-menu_active .burger-menu__lines::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  .burger-menu.burger-menu_active .burger-menu__lines::after {
+    top: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.burger-menu__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 30px 0 35px;
+}
+
+.burger-menu__overlay {
+  display: none;
+  position: absolute;
+  width: 120vw;
+  height: 200vh;
+  z-index: 5;
+  top: 0;
+  left: 50;
+}
+.burger-menu_active .burger-menu__overlay {
+  display: block;
+  opacity: 0.4;
+  background: #FE9013;
+  right: -10%;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

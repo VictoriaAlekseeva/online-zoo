@@ -1,15 +1,16 @@
-.burger-menu_button{
+.burger-menu__button {
   display: none;
   width: 18px;
   height: 10px;
 
   @include media-tablet{
-      display: block;
+    display: block;
+    position: relative;
+    z-index: 50;
   }
-
 }
 
-.burger-menu_lines, .burger-menu_lines::after, .burger-menu_lines::before {
+.burger-menu__lines, .burger-menu__lines::after, .burger-menu__lines::before {
   position: absolute;
   top: 40%;
   width: 18px;
@@ -19,12 +20,90 @@
 
 }
 
-.burger-menu_lines::before {
+.burger-menu__lines::before {
   content: '';
   top: -4px;
 }
 
-.burger-menu_lines::after {
+.burger-menu__lines::after {
   content: '';
   top: 4px;
+}
+
+
+.burger-menu__nav {
+  display: none;
+}
+
+
+.burger-menu {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+
+    &.burger-menu_active {
+
+      .burger-menu__nav {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 110vw;
+        padding: 10px;
+        color: $color-text-dark;
+        background-color: $color-background-light;
+
+        
+      }
+
+      .burger-menu__lines, .burger-menu__lines::after, .burger-menu__lines::before {
+        background-color: $color-text-dark;
+        transition: 0.3s;
+      }
+
+      .burger-menu__lines {
+        background-color: transparent;
+      }
+
+      .burger-menu__lines::before {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      .burger-menu__lines::after {
+        top:0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.burger-menu__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 30px 0 35px;
+}
+
+
+.burger-menu__overlay {
+  display: none;
+  position: absolute;
+  width: 120vw;
+  height: 200vh;
+  z-index: 5;
+  top: 0;
+  left: 50;
+
+  .burger-menu_active & {
+    display: block;
+    opacity: 0.4;
+
+    background: $color-text-colored;
+    right: -10%;
+    transition: 0.5s;
+  }
 }

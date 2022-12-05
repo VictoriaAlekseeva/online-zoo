@@ -53,3 +53,19 @@
 
     }
 }
+
+.logo.burger-menu__logo {
+    width: 66px;
+    height: 42px;
+    background-image: url('../img/svg/bamboo_active.svg');
+    border: 1px solid $color-text-colored;
+    @include font($size: 1.6rem, $height: 1.8rem, $weight: 400);
+    background-position: 10% 80%;
+    color: $color-text-colored;
+    border-color: $color-text-colored;
+
+    @include media-mobile {
+        width: 66px;
+        height: 42px;
+    }
+}
