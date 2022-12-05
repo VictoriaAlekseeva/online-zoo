@@ -16,3 +16,5 @@ function closeMenu() {
 burgerMenuButton.addEventListener('click', toggleMenu);
 burgerOverlay.addEventListener('click', closeMenu);
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
+
+
