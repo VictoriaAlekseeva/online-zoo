@@ -61,6 +61,8 @@ amountScale.onclick = function(event) {
 paymentAmount.oninput = function () {
   removeHighlight();
 
+  if (paymentAmount.value.length > 4) paymentAmount.value = paymentAmount.value.slice(0, 4);
+
   amount.forEach((el) => {
     if (paymentAmount.value == el.innerHTML.slice(1)) amountHightlight(el);
   })
