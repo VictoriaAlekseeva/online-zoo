@@ -850,6 +850,7 @@ h3 {
   border: 1px solid #F9804B;
   border-radius: 5px;
   width: 31.65%;
+  overflow: hidden;
 }
 .pets__card > picture {
   width: 100%;
