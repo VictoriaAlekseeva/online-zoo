@@ -152,7 +152,8 @@
     }
 }
 
-.donation__amount__scale__list {
+.donation__amount__list_dots,
+.donation__amount__list_amount {
     position: relative;
     z-index: 10;
     list-style: none;
@@ -171,70 +172,67 @@
     @include media-mobile {
         margin: 5px 0px 5px;
     }
-
-    &_dots {
-        background-color: #404950;
-        width: 100%;
-        height: 27px;
-        border-radius: 2px;
-        padding: 8px 30px 8px 26px;
-
-        @include media-small-desktop {
-            padding: 8px 13px 8px 13px;
-        }
-
-        @include media-tablet {
-            padding: 8px 35px;
-        }
-
-        @include media-mobile {
-            height: 13px;
-            padding: 4px 17px;
-        }
-    }
-
-    &_amount {
-
-        cursor: pointer;
-
-        @include media-small-desktop {
-
-            width: 101%;
-        }
-
-        @include media-tablet {
-            & .active_tablet {
-                color: $color-text-colored;
-            }
-
-            padding: 0px 10px 0px 10px;
-            width: 100%;
-        }
-
-        @include media-mobile {
-            padding: 0 7px;
-        }
-    }
 }
+
+.donation__amount__list_dots {
+  background-color: #404950;
+  width: 100%;
+  height: 27px;
+  border-radius: 2px;
+  padding: 8px 30px 8px 26px;
+
+  @include media-small-desktop {
+    padding: 8px 13px 8px 13px;
+  }
+
+  @include media-tablet {
+    padding: 8px 35px;
+  }
+
+  @include media-mobile {
+    height: 13px;
+    padding: 4px 17px;
+  }
+}
+
+.donation__amount__list_amount {
+
+  cursor: pointer;
+
+  @include media-small-desktop {
+     width: 101%;
+  }
+
+  @include media-tablet {
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+  }
+
+  @include media-mobile {
+    padding: 0 7px;
+  }
+}
+
 .dots__line {
-    position: absolute;
-    z-index: -1;
-    display: block;
-    top: calc(48% - 1px);
-    background-color: #72828E;
-    height: 2px;
-    width: calc(100% - 62px);
+  position: absolute;
+  z-index: -1;
+  display: block;
+  top: calc(48% - 1px);
+  background-color: #72828E;
+  height: 2px;
+  width: calc(100% - 62px);
 
-    @include media-small-desktop {
-        width: calc(100% - 26px);
-    }
+  @include media-small-desktop {
+    width: calc(100% - 26px);
+  }
 
-    @include media-tablet {
-        width: calc(100% - 70px);
-    }
-    @include media-mobile {
-        width: calc(100% - 34px);
-    }
+  @include media-tablet {
+    width: calc(100% - 70px);
+  }
+
+  @include media-mobile {
+    width: calc(100% - 34px);
+  }
 }
 
 
@@ -263,12 +261,12 @@
 
     }
 
-    &.active::after {
+    &.chosen::after {
         content: '';
         border: 1px solid $color-text-colored;
     }
 
-    &.active::before {
+    &.chosen::before {
         content: '';
         position: absolute;
         width: 23px;
@@ -283,44 +281,6 @@
             height: 10px;
             bottom: calc(50% - 5.5px);
             right: calc(50% - 6.4px);
-        }
-    }
-
-    &.active_tablet { //! remove after js will be added
-
-        @include media-tablet {
-            display: block;
-
-            &::after {
-                content: '';
-                border: 1px solid $color-text-colored;
-
-                @include media-mobile {
-                    width: 20px;
-                    height: 20px;
-
-                    bottom: calc(50% - 10px);
-                    left: calc(50% - 11px);
-                }
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                width: 23px;
-                height: 23px;
-                border-radius: 50%;
-                border: 1px solid $color-text-colored;
-                bottom: calc(50% - 12px);
-                right: calc(50% - 12px);
-
-                @include media-mobile {
-                    width: 10px;
-                    height: 10px;
-                    bottom: calc(50% - 5.5px);
-                    right: calc(50% - 6.4px);
-                }
-            }
         }
     }
 }
@@ -380,6 +340,10 @@
         @include font($size:1.3rem, $height: 1.8rem, $weight: 500, $style: normal);
         padding-top: 0px;
         width: 30px;
+    }
+
+    &.chosen {
+      color: $color-text-colored;
     }
 
 }

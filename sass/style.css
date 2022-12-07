@@ -1788,8 +1788,8 @@ h3 {
 
 .testimonials-popup__close {
   position: absolute;
-  top: -20px;
-  right: -30px;
+  top: -30px;
+  right: -20px;
   z-index: 40;
   cursor: pointer;
   font-size: 32px;
@@ -2239,7 +2239,8 @@ h3 {
   }
 }
 
-.donation__amount__scale__list {
+.donation__amount__list_dots,
+.donation__amount__list_amount {
   position: relative;
   z-index: 10;
   list-style: none;
@@ -2248,21 +2249,25 @@ h3 {
   margin: 10px 0px;
 }
 @media (max-width: 1200px) {
-  .donation__amount__scale__list {
+  .donation__amount__list_dots,
+  .donation__amount__list_amount {
     margin: 13px 4px 13px 2px;
   }
 }
 @media (max-width: 740px) {
-  .donation__amount__scale__list {
+  .donation__amount__list_dots,
+  .donation__amount__list_amount {
     margin: 10px 0px;
   }
 }
 @media (max-width: 480px) {
-  .donation__amount__scale__list {
+  .donation__amount__list_dots,
+  .donation__amount__list_amount {
     margin: 5px 0px 5px;
   }
 }
-.donation__amount__scale__list_dots {
+
+.donation__amount__list_dots {
   background-color: #404950;
   width: 100%;
   height: 27px;
@@ -2270,40 +2275,38 @@ h3 {
   padding: 8px 30px 8px 26px;
 }
 @media (max-width: 1200px) {
-  .donation__amount__scale__list_dots {
+  .donation__amount__list_dots {
     padding: 8px 13px 8px 13px;
   }
 }
 @media (max-width: 740px) {
-  .donation__amount__scale__list_dots {
+  .donation__amount__list_dots {
     padding: 8px 35px;
   }
 }
 @media (max-width: 480px) {
-  .donation__amount__scale__list_dots {
+  .donation__amount__list_dots {
     height: 13px;
     padding: 4px 17px;
   }
 }
-.donation__amount__scale__list_amount {
+
+.donation__amount__list_amount {
   cursor: pointer;
 }
 @media (max-width: 1200px) {
-  .donation__amount__scale__list_amount {
+  .donation__amount__list_amount {
     width: 101%;
   }
 }
 @media (max-width: 740px) {
-  .donation__amount__scale__list_amount {
+  .donation__amount__list_amount {
     padding: 0px 10px 0px 10px;
     width: 100%;
   }
-  .donation__amount__scale__list_amount .active_tablet {
-    color: #FE9013;
-  }
 }
 @media (max-width: 480px) {
-  .donation__amount__scale__list_amount {
+  .donation__amount__list_amount {
     padding: 0 7px;
   }
 }
@@ -2356,11 +2359,11 @@ h3 {
   bottom: calc(50% - 20px);
   left: calc(50% - 20px);
 }
-.scale__dots.active::after {
+.scale__dots.chosen::after {
   content: "";
   border: 1px solid #FE9013;
 }
-.scale__dots.active::before {
+.scale__dots.chosen::before {
   content: "";
   position: absolute;
   width: 23px;
@@ -2371,44 +2374,7 @@ h3 {
   left: calc(50% - 12.5px);
 }
 @media (max-width: 480px) {
-  .scale__dots.active::before {
-    width: 10px;
-    height: 10px;
-    bottom: calc(50% - 5.5px);
-    right: calc(50% - 6.4px);
-  }
-}
-@media (max-width: 740px) {
-  .scale__dots.active_tablet {
-    display: block;
-  }
-  .scale__dots.active_tablet::after {
-    content: "";
-    border: 1px solid #FE9013;
-  }
-}
-@media (max-width: 740px) and (max-width: 480px) {
-  .scale__dots.active_tablet::after {
-    width: 20px;
-    height: 20px;
-    bottom: calc(50% - 10px);
-    left: calc(50% - 11px);
-  }
-}
-@media (max-width: 740px) {
-  .scale__dots.active_tablet::before {
-    content: "";
-    position: absolute;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    border: 1px solid #FE9013;
-    bottom: calc(50% - 12px);
-    right: calc(50% - 12px);
-  }
-}
-@media (max-width: 740px) and (max-width: 480px) {
-  .scale__dots.active_tablet::before {
+  .scale__dots.chosen::before {
     width: 10px;
     height: 10px;
     bottom: calc(50% - 5.5px);
@@ -2483,6 +2449,9 @@ h3 {
     padding-top: 0px;
     width: 30px;
   }
+}
+.scale__amount.chosen {
+  color: #FE9013;
 }
 
 .payment-amount {
