@@ -20,10 +20,10 @@
         <h1  class="logo_header logo"><a href="./index.html"> PetStory online</a></h1>
       <nav class="header__navigation">
         <ul class="header__navigation__list">
-          <li class="header__navigation__link active "><a href="./index.html#main" class="active " >About</a></li>
+          <li class="header__navigation__link"><a href="./index.html#main" >About</a></li>
           <li class="header__navigation__link"><a href="#">Map</a></li>
           <li class="header__navigation__link"><a href="#">Zoos</a></li>
-          <li class="header__navigation__link"><a href="./donation.html"> Donate</a></li>
+          <li class="header__navigation__link active"><a href="./donation.html" class="active"> Donate</a></li>
           <li class="header__navigation__link"><a href="#">Contact us</a></li>
         </ul>
       </nav>
@@ -76,29 +76,29 @@
             </div>
             <div class="donation__amount">
               <p class="donation__amount_text">Amount</p>
-              <ul class="donation__amount__scale__list donation__amount__scale__list_dots">
+              <ul class="donation__amount__list_dots">
                 <div class="dots__line"></div>
-                <li class="scale__dots hide_small_desktop hide_tablet"></li>
-                <li class="scale__dots hide_tablet"></li>
-                <li class="scale__dots active hide_tablet"></li>
-                <li class="scale__dots"></li>
-                <li class="scale__dots"></li>
-                <li class="scale__dots active_tablet"></li>
-                <li class="scale__dots"></li>
-                <li class="scale__dots"></li>
+                <li class="scale__dots hide_small_desktop hide_tablet" id="$5000"></li>
+                <li class="scale__dots hide_tablet" id="$2000"></li>
+                <li class="scale__dots hide_tablet" id="$1000"></li>
+                <li class="scale__dots" id="$500"></li>
+                <li class="scale__dots" id="$250"></li>
+                <li class="scale__dots chosen" id="$100"></li>
+                <li class="scale__dots" id="$50"></li>
+                <li class="scale__dots" id="$25"></li>
               </ul>
-              <ul class="donation__amount__scale__list donation__amount__scale__list_amount">
+              <ul class="donation__amount__list_amount">
                 <li class="scale__amount hide_small_desktop hide_tablet">$5000</li>
                 <li class="scale__amount hide_tablet">$2000</li>
-                <li class="scale__amount active hide_tablet">$1000</li>
+                <li class="scale__amount hide_tablet">$1000</li>
                 <li class="scale__amount">$500</li>
                 <li class="scale__amount">$250</li>
-                <li class="scale__amount active_tablet">$100</li>
+                <li class="scale__amount chosen">$100</li>
                 <li class="scale__amount">$50</li>
                 <li class="scale__amount">$25</li>
               </ul>
               <form class="payment-options">
-                <input type="number" name="payment-amount" min="0" max="9999" class="payment-amount" placeholder="Another amount" >
+                <input type="number" name="payment-amount" min="0" max="9999" class="payment-amount" placeholder="Another amount" value="100">
                 <div class="payment-frequency">
                   <label>
                     <input type="radio" name="payment-type" value="Monthly" class="payment-type"> Monthly
@@ -143,7 +143,7 @@
           </div>
           <nav class="footer__navigation">
             <ul class="footer__navigation__list">
-              <li class="footer__navigation__link active not_interactive"><a href="./index.html#main" class="active not_interactive" >About</a></li>
+              <li class="footer__navigation__link"><a href="./index.html#main">About</a></li>
               <li class="footer__navigation__link"><a href="#">Map</a></li>
               <li class="footer__navigation__link"><a href="#">Zoos</a></li>
               <li class="footer__navigation__link"><a href="#">Contact us</a></li>
@@ -159,6 +159,6 @@
 
     </div>
   </footer>
-  <script src="./index.js"></script>
+  <script src="./donate.js"></script>
 </body>
 </html>
